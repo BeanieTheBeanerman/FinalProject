@@ -29,6 +29,7 @@ function startSliding() {
 
 startSliding();
 
+
 const squareButton = document.querySelectorAll(".square-button"),
   profiles = document.querySelectorAll(".recom-profiles");
 
@@ -65,13 +66,6 @@ const modalOpenBtn = document.querySelector(".button"),
   modal = document.querySelector(".modal"),
   modalCloseBtn = document.querySelector(".close-modal");
 
-// function openModal() {
-//   modal.classList.add("pop-up");
-// }
-
-// function closeModal() {
-//   modal.classList.remove("pop-up");
-// }
 
 function dynamicOpenModal(selector) {
   const modal = document.querySelector(selector);
@@ -91,6 +85,9 @@ function dynamicCloseModal(selector) {
   }
 }
 
+modalOpenBtn.addEventListener("click", () => {
+  dynamicOpenModal(".modal");
+});
 
 const userUsername = document.getElementById("username"),
   userEmail = document.getElementById("useremail"),
@@ -98,9 +95,21 @@ const userUsername = document.getElementById("username"),
   userText = document.getElementById("userText"),
   form = document.getElementById("form");
 
+form.addEventListener("submit", (e) => {
+  e.preventDefault;
+  let userData = {
+    name: userUsername.value,
+    mail: userEmail.value,
+    website: userWebsite.value,
+    text: userText.value,
+  };
+  registerUser(userData);
+  form.reset();
+});
+
 async function registerUser(userData) {
   try {
-    const send = await fetch("http://borjomi.loremipsum.ge/api/send-message", {
+    const send = await fetch("https://borjomi.loremipsum.ge/api/send-message", {
       method: "POST",
       body: JSON.stringify(userData),
       headers: {
