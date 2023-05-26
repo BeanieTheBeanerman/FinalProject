@@ -531,7 +531,7 @@
  
   .recomendation-section {
     height: 570px;
-    background-image: url("../imgs/recomendationsection/countdown-bg@2x.png");
+    background-image: url("../imgs/recomendation/countdown-bg@2x.png");
     display: flex;
     justify-content: center;
     align-items: center;
@@ -543,5 +543,74 @@
     width: 430px;
     font-family: roboto-light;
   }
+  .recom-profiles {
+    display: none;
+  }
   
+  .recom-profiles.active {
+    display: flex;
+    align-items: center;
+  }
   
+  .recom-face {
+    border: 2px dashed white;
+    border-radius: 50%;
+    margin-right: 50px;
+    padding-top: 4px;
+  }
+  
+  .recom-face img {
+    width: 140px;
+    height: 140px;
+    mix-blend-mode: multiply;
+    border-radius: 50%;
+  }
+  
+  .quote-div img {
+    width: 39px;
+    height: 26px;
+    mix-blend-mode: multiply;
+  }
+  
+  .picture-div {
+    display: flex;
+    margin-left: 50px;
+  }
+  
+  .quote-div h5 {
+    font-size: 13px;
+    color: #e93656;
+    margin-top: 28px;
+    margin-bottom: 9px;
+    font-family: roboto-light;
+  }
+  
+  .quote-div h2 {
+    font-size: 28px;
+    color: #ffffff;
+    font-family: glacial-bold;
+  }
+  
+  .square-button {
+    width: 13px;
+    height: 13px;
+    border: #ffffff 2px solid;
+    margin-bottom: 14px;
+  }
+  
+  .square-div {
+    margin-left: 153px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .square-button:hover {
+    border: #e93656 2px solid;
+  }
+  
+  .square-button.active {
+    border: 2px solid #e93656;
+  }
+  
+ 
